@@ -1,6 +1,7 @@
 document.getElementById("blog").addEventListener("click",function(){
     window.location.href='blog.html';
 });
+
 const handleCategory = async() => {
     const response = await fetch("https://openapi.programming-hero.com/api/videos/categories");
     const data = await response.json();
@@ -17,17 +18,15 @@ const handleCategory = async() => {
         
     });
 };
+
 function publishTime(seconds) {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const remainingSeconds = seconds % 60;
   
     return `${hours}h ${minutes}m ${remainingSeconds}s`;
-  }
+}
   
-
-
-
 const handleLoadVideos = async(categoryId)=>{
     
     const response= await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
@@ -73,22 +72,23 @@ const handleLoadVideos = async(categoryId)=>{
          });
      
       } else{
+        const cardContainer =document.getElementById("card-container");
         const div=document.createElement("div");
+        cardContainer.classList=`flex justify-center`
         
         div.innerHTML=`
-        <div class="m-20 border-4">
-        <img src="image/Icon.png">
-        <p class="font-bold">Oops!! Sorry,There is no content here</p>
+        <div class="ml-1/2 mt-8">
+        <img class="w-56 h-56" src="image/Icon.png">
+        <p class="font-bold text-center">Oops!! Sorry,There is no <br> content here</p>
         </div>
         `
         cardContainer.appendChild(div);
 
     } 
+    
 };
-document.getElementById("sort").addEventListener("click",function(){
-    let views=data.data[others.views];
 
-})
+
 handleCategory();
 handleLoadVideos(1000);
 
