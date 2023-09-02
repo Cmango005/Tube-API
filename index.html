@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="image/phtube.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav class="container mx-auto mb-4">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div>
+                    <img src="image/Logo.png" alt="">
+                  </div>
+                </div>
+                <div class="navbar-center">
+                    <button id="sort" class="btn">Sort By View</button>
+                </div>
+                <div class="navbar-end">
+                    <button id="blog" class="btn bg-red-600 text-white">Blog</button>
+                </div>
+              </div>
+        </nav>
+        <hr class="w-11/12  mx-auto">
+    </header>
+    <main>
+        <section class="container mx-auto mt-5">
+            <div id="button" class="flex justify-center gap-4"></div>
+            <div id="card-container" class="grid sm:grid-cols-1 lg:grid-cols-4">
+               
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
