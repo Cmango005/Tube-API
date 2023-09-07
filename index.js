@@ -72,17 +72,18 @@ const handleLoadVideos = async(categoryId)=>{
          });
      
       } else{
-        const cardContainer =document.getElementById("card-container");
+        const cardContainer2 =document.getElementById("card-container2");
         const div=document.createElement("div");
-        cardContainer.classList=`flex justify-center`
-        
+        cardContainer2.textContent='';
+        cardContainer2.classList=`flex justify-center`
+       
         div.innerHTML=`
         <div class="ml-1/2 mt-8">
         <img class="w-56 h-56" src="image/Icon.png">
         <p class="font-bold text-center">Oops!! Sorry,There is no <br> content here</p>
         </div>
         `
-        cardContainer.appendChild(div);
+        cardContainer2.appendChild(div);
 
     } 
     
@@ -91,4 +92,5 @@ const handleLoadVideos = async(categoryId)=>{
 
 handleCategory();
 handleLoadVideos(1000);
+
 
